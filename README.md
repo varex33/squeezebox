@@ -1,1 +1,1 @@
-Squeezebox is a cool html/javascript templated converted into a WordPress theme
+Squeezebox is a cool html/javascript template converted into a WordPress portfolio Theme
