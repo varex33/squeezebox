@@ -8,14 +8,14 @@
 		</div>
 	</div> <!-- .cd-intro-block -->
 
-	<div class="cd-projects-wrapper">
+<div class="cd-projects-wrapper">
 		<ul class="cd-slider">
 			<li class="current">
 				<a href="#0">
 					<img src="wp-content/themes/squeezebox/img/img.png" alt="project image">
 					<div class="project-info">
-						<h2>BackPack App</h2>
-						<p>Fundraising mobile app</p>
+						<h2>Project 1</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
 					</div>
 				</a>
 			</li>
@@ -100,22 +100,17 @@
 				</a>
 			</li>
 		</ul>
-                    <!-- this is where the loop for the thumbnails starts -->
 
-                            
 		<ul class="cd-slider-navigation cd-img-replace">
 			<li><a href="#0" class="prev inactive">Prev</a></li>
 			<li><a href="#0" class="next">Next</a></li>
 		</ul> <!-- .cd-slider-navigation -->
-                
-                
 	</div> <!-- .cd-projects-wrapper -->
 
-                            
 	<div class="cd-project-content">
 		<div>
-			<h2>BackPack App</h2>
-			<em>Fundraising mobile app for low income schools.</em>
+			<h2>Project title here</h2>
+			<em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, ullam.</em>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus. 
 			</p>
