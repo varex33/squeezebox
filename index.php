@@ -3,107 +3,36 @@
 <?php //print(get_template_directory_uri()); ?>
 <div class="cd-intro-block">
 		<div class="content-wrapper">
+		 <?php 
+		 /*
+		 	$query = new WP_Query(array( 'posts_per_page' => 5 ));
+    	 		while ($query->have_posts()) :
+    	  				$query->the_post(); 
+    					 the_content(); 
+    	 	    endwhile; */
+    	?>
+
 			<h1>Linda Shum Portfolio</h1>
 			<a href="#0" class='cd-btn' data-action="show-projects">Show projects</a>
 		</div>
 	</div> <!-- .cd-intro-block -->
 
+	
 <div class="cd-projects-wrapper">
 		<ul class="cd-slider">
-			<li class="current">
-				<a href="#0">
-					<img src="wp-content/themes/squeezebox/img/img.png" alt="project image">
-					<div class="project-info">
-						<h2>Project 1</h2>
-						<p>Lorem ipsum dolor sit amet.</p>
-					</div>
-				</a>
-			</li>
+           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                           <li class="current">
+                                <a href='#0'>
+                                    <img src='wp-content/themes/squeezebox/img/img.png' alt='project image'>
+                                    <div class='project-info'>
+                                        <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                                        <p>Description of project</p>
+                                    </div>
+                                </a>
+                            </li>
+            <?php endwhile;endif; ?>
 
-			<li>
-				<a href="#0">
-					<img src="wp-content/themes/squeezebox/img/img.png" alt="project image">
-					<div class="project-info">
-						<h2>Project 2</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, dicta.</p>
-					</div>
-				</a>
-			</li>
 
-			<li>
-				<a href="#0">
-					<img src="wp-content/themes/squeezebox/img/img.png" alt="project image">
-					<div class="project-info">
-						<h2>Project 3</h2>
-						<p>Lorem ipsum dolor sit amet.</p>
-					</div>
-				</a>
-			</li>
-
-			<li>
-				<a href="#0">
-					<img src="img/img.png" alt="project image">
-					<div class="project-info">
-						<h2>Project 4</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-					</div>
-				</a>
-			</li>
-
-			<li>
-				<a href="#0">
-					<img src="img/img.png" alt="project image">
-					<div class="project-info">
-						<h2>Project 5</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur.</p>
-					</div>
-				</a>
-			</li>
-
-			<li>
-				<a href="#0">
-					<img src="img/img.png" alt="project image">
-					<div class="project-info">
-						<h2>Project 6</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat.</p>
-					</div>
-				</a>
-			</li>
-
-			<li>
-				<a href="#0">
-					<img src="img/img.png" alt="project image">
-					<div class="project-info">
-						<h2>Project 7</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</div>
-				</a>
-			</li>
-			
-			<li>
-				<a href="#0">
-					<img src="img/img.png" alt="project image">
-					<div class="project-info">
-						<h2>Project 8</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-					</div>
-				</a>
-			</li>
-
-			<li>
-				<a href="#0">
-					<img src="img/img.png" alt="project image">
-					<div class="project-info">
-						<h2>Project 9</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-					</div>
-				</a>
-			</li>
-		</ul>
-
-		<ul class="cd-slider-navigation cd-img-replace">
-			<li><a href="#0" class="prev inactive">Prev</a></li>
-			<li><a href="#0" class="next">Next</a></li>
 		</ul> <!-- .cd-slider-navigation -->
 	</div> <!-- .cd-projects-wrapper -->
 
