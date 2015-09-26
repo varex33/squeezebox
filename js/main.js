@@ -4,6 +4,7 @@ jQuery(document).ready(function(){
 		projectsSlider = projectsContainer.children('.cd-slider'),
 		singleProjectContent = jQuery('.cd-project-content'),
 		sliderNav = jQuery('.cd-slider-navigation');
+	//	idContainer = jQuery('.cd-projects-wrapper').children('cd-slider');
 
 	var resizing = false;
 	
@@ -46,8 +47,15 @@ jQuery(document).ready(function(){
 			nextSides(projectsSlider);
 		} else {
 			singleProjectContent.addClass('is-visible');
+			//alert(jQuery('.current p').text());
 		}
 	});
+	// Get POST ID 
+	/*
+	idContainer.on('click','a.link', function(event){
+		alert('hi');
+	});
+	*/
 
 	//close single project content
 	singleProjectContent.on('click', '.close', function(event){

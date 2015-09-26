@@ -102,12 +102,9 @@ add_action( 'widgets_init', 'squeezebox_widgets_init' );
 
 
 function squeezebox_styles() { 
-        //wp_enqueue_script('jquery');       
         wp_enqueue_script('main', get_template_directory_uri() .'/js/main.js',array( 'jquery' ), ' ', true);
         wp_enqueue_script('mobile', get_template_directory_uri() .'/js/jquery.mobile.custom.min.js', array( 'jquery' ), ' ', true);
         //wp_enqueue_script('modernizer', get_template_directory_uri() .'/js/modernizr.js', true, ' ', false);
-        //wp_enqueue_script('testing-alert', get_template_directory_uri() .'/js/new.js', array( 'jquery' ));
-        wp_enqueue_script('testing-alert', get_template_directory_uri() .'/js/modernizr.js', array( 'jquery' ));
 
   // FontAwesome
         wp_enqueue_style('squeezebox_fontawesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
