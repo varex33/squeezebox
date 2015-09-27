@@ -111,6 +111,7 @@ function squeezebox_styles() {
         wp_enqueue_style('squeezebox-style', get_stylesheet_uri()); 
     }
 add_action( 'wp_enqueue_scripts', 'squeezebox_styles', 99);
+
  
 
 

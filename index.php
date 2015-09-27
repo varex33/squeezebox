@@ -1,6 +1,8 @@
 
 <?php get_header(); ?>
-<?php //print(get_template_directory_uri()); ?>
+<?php //print(get_template_directory_uri());
+		$GLOBALS['variable'] = something;
+ ?>
 <div class="cd-intro-block">
 		<div class="content-wrapper">
 		 <?php 
@@ -22,10 +24,16 @@
 		<ul class="cd-slider">
            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                            <li class="current">
-                                <a href='#0'>
+                                <a href='#0'>     
+                                <?php
+                                	if (has_post_thumbnail()){
+                                    	the_post_thumbnail(array('350','400'));                              		
+                                	}                        
+                                	else{ ?>
                                     <img src='wp-content/themes/squeezebox/img/img.png' alt='project image'>
+                                    <?php }?>
                                     <div class='project-info'>
-                                        <h2><a href="<?php the_permalink() ?>" class="link" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                                        <h2><a href="<?php the_permalink() ?>" onclick="alert(<?php $postID=get_the_ID(); ?>);" class="link" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
                                         <p>Description of project <?php  echo get_the_ID(); ?></p>
                                     </div>
                                 </a>
@@ -39,7 +47,9 @@
 	<div class="cd-project-content">
 		<div>
 			<p><?php
-			$post_object = get_post( $post_id );
+			//$post_object = get_post( $post_id );
+			echo $postID;
+			$post_object = get_post(get_the_ID());
 			echo $post_object->post_content;
 			?>
 			</p>
