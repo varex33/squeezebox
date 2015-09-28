@@ -5,6 +5,12 @@ Description: Mobile stackable style
 Author: Linda Shum 
 URI: http://shumdesign.com
 */
+
+/* CSS Update to hide content in boxes by Sam */
+.project-info span{
+  display: none;
+}
+
 /* -------------------------------- 
 
 Reset browser styles

@@ -4,7 +4,7 @@ jQuery(document).ready(function(){
 		projectsSlider = projectsContainer.children('.cd-slider'),
 		singleProjectContent = jQuery('.cd-project-content'),
 		sliderNav = jQuery('.cd-slider-navigation');
-	//	idContainer = jQuery('.cd-projects-wrapper').children('cd-slider');
+		projectInfo = jQuery('.cd-projects-wrapper').find('.project-info'); // Added by Sam
 
 	var resizing = false;
 	
@@ -47,15 +47,17 @@ jQuery(document).ready(function(){
 			nextSides(projectsSlider);
 		} else {
 			singleProjectContent.addClass('is-visible');
-			//alert(jQuery('.current p').text());
 		}
 	});
-	// Get POST ID 
-	/*
-	idContainer.on('click','a.link', function(event){
-		alert('hi');
+
+	//  Show WP post content in project container .. added by Sam 
+	projectInfo.click(function(){
+		//jQuery.ajaxSetup({cache:false});
+		var post_link = jQuery(this).children('span').html();
+		//alert(post_link);
+		singleProjectContent.children('div').html(post_link);
 	});
-	*/
+	
 
 	//close single project content
 	singleProjectContent.on('click', '.close', function(event){

@@ -33,8 +33,12 @@
                                     <img src='wp-content/themes/squeezebox/img/img.png' alt='project image'>
                                     <?php }?>
                                     <div class='project-info'>
-                                        <h2><a href="<?php the_permalink() ?>" onclick="alert(<?php $postID=get_the_ID(); ?>);" class="link" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
-                                        <p>Description of project <?php  echo get_the_ID(); ?></p>
+                                        <h2><a href="<?php the_permalink() ?>" class="link" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                                        <p>Description of project</p>
+                                        <span><?php  
+                                            $post_object = get_post(get_the_ID());
+											echo $post_object->post_content;
+                                         ?></span>
                                     </div>
                                 </a>
                             </li>
@@ -46,13 +50,6 @@
 
 	<div class="cd-project-content">
 		<div>
-			<p><?php
-			//$post_object = get_post( $post_id );
-			echo $postID;
-			$post_object = get_post(get_the_ID());
-			echo $post_object->post_content;
-			?>
-			</p>
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>
 	</div> <!-- .cd-project-content -->
