@@ -27,7 +27,7 @@
                                 <a href='#0'>     
                                 <?php
                                 	if (has_post_thumbnail()){
-                                    	the_post_thumbnail(array('350','400'));                              		
+                                    	the_post_thumbnail(array('270','300'));                              		
                                 	}                        
                                 	else{ ?>
                                     <img src='wp-content/themes/squeezebox/img/img.png' alt='project image'>
