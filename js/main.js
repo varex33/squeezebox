@@ -51,10 +51,10 @@ jQuery(document).ready(function(){
 	});
 
 	//  Show WP post content in project container .. added by Sam 
+
+	
 	projectInfo.click(function(){
-		//jQuery.ajaxSetup({cache:false});
 		var post_link = jQuery(this).children('span').html();
-		//alert(post_link);
 		singleProjectContent.children('div').html(post_link);
 	});
 	

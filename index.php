@@ -1,19 +1,8 @@
 
 <?php get_header(); ?>
-<?php //print(get_template_directory_uri());
-		$GLOBALS['variable'] = something;
- ?>
+<?php //print(get_template_directory_uri()); ?>
 <div class="cd-intro-block">
 		<div class="content-wrapper">
-		 <?php 
-		 /*
-		 	$query = new WP_Query(array( 'posts_per_page' => 5 ));
-    	 		while ($query->have_posts()) :
-    	  				$query->the_post(); 
-    					 the_content(); 
-    	 	    endwhile; */
-    	?>
-
 			<h1>Linda Shum Portfolio</h1>
 			<a href="#0" class='cd-btn' data-action="show-projects">Show projects</a>
 		</div>
