@@ -4,6 +4,7 @@ jQuery(document).ready(function(){
 		projectsSlider = projectsContainer.children('.cd-slider'),
 		singleProjectContent = jQuery('.cd-project-content'),
 		sliderNav = jQuery('.cd-slider-navigation');
+		projectInfo = jQuery('.cd-projects-wrapper').find('.project-info'); // Added by Sam
 
 	var resizing = false;
 	
@@ -48,6 +49,15 @@ jQuery(document).ready(function(){
 			singleProjectContent.addClass('is-visible');
 		}
 	});
+
+	//  Show WP post content in project container .. added by Sam 
+
+	
+	projectInfo.click(function(){
+		var post_link = jQuery(this).children('span').html();
+		singleProjectContent.children('div').html(post_link);
+	});
+	
 
 	//close single project content
 	singleProjectContent.on('click', '.close', function(event){
