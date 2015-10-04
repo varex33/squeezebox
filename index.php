@@ -34,11 +34,16 @@
 
             <?php endwhile;endif; ?>
 
-		</ul> <!-- .cd-slider-navigation -->
+		</ul>
+        <ul class="cd-slider-navigation cd-img-replace">
+            <li><a href="#0" class="prev inactive">Prev</a></li>
+            <li><a href="#0" class="next">Next</a></li>
+        </ul> <!-- .cd-slider-navigation -->
 	</div> <!-- .cd-projects-wrapper -->
 
 	<div class="cd-project-content">
 		<div>
+        <p></p>
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>
 	</div> <!-- .cd-project-content -->

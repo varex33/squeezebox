@@ -697,7 +697,7 @@ Project slider navigation
   left: 0;
   height: 60px;
   width: 4%;
-  background: url(/wp-content/themes/sqeezebox/img/cd-arrow.png) no-repeat center center;
+  background: url(img/cd-arrow.png) no-repeat center center;
   -webkit-transition: opacity 0.2s 0s, visibility 0s 0s;
   -moz-transition: opacity 0.2s 0s, visibility 0s 0s;
   transition: opacity 0.2s 0s, visibility 0s 0s;
