@@ -874,3 +874,9 @@ Keyframes
     opacity: 1;
   }
 }
+
+h1.entry-title {
+    font-size: 4.4rem;
+    font-weight: 300;
+  }
+

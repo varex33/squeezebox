@@ -13,23 +13,29 @@
 		<ul class="cd-slider">
            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                            <li class="current">
-                                <a href='#0'>     
+                                <div class="wp-post">
+                                <a href='#0'>           
                                 <?php
                                 	if (has_post_thumbnail()){
                                     	the_post_thumbnail(array('270','300'));                              		
                                 	}                        
                                 	else{ ?>
-                                    <img src='wp-content/themes/squeezebox/img/img.png' alt='project image'>
+                                    <img src='<?php get_template_directory_uri() ?>/img/img.png' alt='project image'>
                                     <?php }?>
                                     <div class='project-info'>
-                                        <h2><a href="<?php the_permalink() ?>" class="link" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                                        <h2><a href="<?php the_permalink() ?>" class="link" rel="bookmark"
+                                         title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
                                         <p>Description of project</p>
-                                        <span><?php  
-                                            $post_object = get_post(get_the_ID());
-											echo $post_object->post_content;
-                                         ?></span>
+                                        <span>
+                                        <?php  
+                                             get_template_part( 'content', 'single' );
+                                            //$post_object = get_post(get_the_ID());
+											 //$post_object->post_content;
+                                         ?>
+                                         </span>
                                     </div>
                                 </a>
+                                </div>
                             </li>
 
             <?php endwhile;endif; ?>
